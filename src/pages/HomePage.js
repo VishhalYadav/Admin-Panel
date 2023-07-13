@@ -1,7 +1,7 @@
 import React from "react";
-
-const HomePage = () => {
-  return <h2> This is homepage</h2>;
+import Categories from "../components/Categories";
+const HomePage = (props) => {
+  return <Categories categories={props.categories} />;
 };
 
 export default HomePage;

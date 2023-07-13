@@ -1,0 +1,22 @@
+.category-container {
+  border: 2px solid black;
+  width: 55%;
+  display: flex;
+  position: relative;
+  left: 250px;
+  top: 150px;
+  border-radius: 10px;
+}
+
+.category-container__category {
+  border: 2px solid red;
+  margin: 8px;
+  padding: 3px;
+  min-width: 6rem;
+  height: 5rem;
+  border-radius: 5px;
+}
+
+.center {
+  text-align: center;
+}
