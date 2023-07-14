@@ -8,31 +8,173 @@ function App() {
       id: "c1",
       key: "1",
       title: "House Painters",
+      rating: "4.84 (9.5 M bookings)",
+      packages: [
+        {
+          name: "package1",
+          avatar: "",
+        },
+        {
+          name: "package2",
+          avatar: "",
+        },
+        {
+          name: "package3",
+          avatar: "",
+        },
+      ],
+      mediaAd:
+        "https://images.pexels.com/photos/2696064/pexels-photo-2696064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       id: "c2",
       key: "2",
       title: "Home Repairs",
+      rating: "4.84 (9.5 M bookings)",
+      mediaAd:
+        "https://images.pexels.com/photos/2696064/pexels-photo-2696064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      packages: [
+        {
+          name: "package1",
+          avatar: "",
+        },
+        {
+          name: "package2",
+          avatar: "",
+        },
+        {
+          name: "package3",
+          avatar: "",
+        },
+      ],
       subCategories: [
-        { id: "c21", key: "21", title: "Electrician" },
-        { id: "c21", key: "22", title: "Plumber" },
-        { id: "c21", key: "23", title: "Carpenter" },
+        {
+          id: "c21",
+          key: "21",
+          title: "Electrician",
+          rating: "4.84 (9.5 M bookings)",
+          packages: [
+            {
+              name: "package1",
+              avatar: "",
+            },
+            {
+              name: "package2",
+              avatar: "",
+            },
+            {
+              name: "package3",
+              avatar: "",
+            },
+          ],
+        },
+        {
+          id: "c21",
+          key: "22",
+          title: "Plumber",
+          rating: "4.84 (9.5 M bookings)",
+          packages: [
+            {
+              name: "package1",
+              avatar: "",
+            },
+            {
+              name: "package2",
+              avatar: "",
+            },
+            {
+              name: "package3",
+              avatar: "",
+            },
+          ],
+        },
+        {
+          id: "c21",
+          key: "23",
+          title: "Carpenter",
+          rating: "4.84 (9.5 M bookings)",
+          packages: [
+            {
+              name: "package1",
+              avatar: "",
+            },
+            {
+              name: "package2",
+              avatar: "",
+            },
+            {
+              name: "package3",
+              avatar: "",
+            },
+          ],
+        },
       ],
     },
     {
       id: "c3",
       key: "3",
       title: "Salon for men",
+      rating: "4.84 (9.5 M bookings)",
+      mediaAd:
+        "https://images.pexels.com/photos/2696064/pexels-photo-2696064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      packages: [
+        {
+          name: "package1",
+          avatar: "",
+        },
+        {
+          name: "package2",
+          avatar: "",
+        },
+        {
+          name: "package3",
+          avatar: "",
+        },
+      ],
     },
     {
       id: "c4",
       key: "4",
       title: "Women's Therapy",
+      rating: "4.84 (9.5 M bookings)",
+      mediaAd:
+        "https://images.pexels.com/photos/2696064/pexels-photo-2696064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      packages: [
+        {
+          name: "package1",
+          avatar: "",
+        },
+        {
+          name: "package2",
+          avatar: "",
+        },
+        {
+          name: "package3",
+          avatar: "",
+        },
+      ],
     },
     {
       id: "c5",
       key: "5",
       title: "Men's Therapy",
+      rating: "4.84 (9.5 M bookings)",
+      mediaAd:
+        "https://images.pexels.com/photos/2696064/pexels-photo-2696064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      packages: [
+        {
+          name: "package1",
+          avatar: "",
+        },
+        {
+          name: "package2",
+          avatar: "",
+        },
+        {
+          name: "package3",
+          avatar: "",
+        },
+      ],
     },
   ];
 
@@ -46,7 +188,7 @@ function App() {
         />
         <Route
           path="/:categoryId/categories"
-          element={<CategoryPage />}
+          element={<CategoryPage categories={DUMMY_CATEGORIES} />}
           exact
         />
         <Route path="/*" element={<Error />} />
