@@ -13,14 +13,44 @@ function App() {
         {
           name: "package1",
           avatar: "",
+          subServices: [
+            {
+              name: "Tap repair",
+              rating: "4.79 (170.7K reviews)",
+              price: "78",
+              time: "5 mins",
+              including: ["Stuck or leaking tap", "UC Warranty Support"],
+              excluding: ["Repair or reinstallion", "Warranty on spare parts"],
+            },
+          ],
         },
         {
           name: "package2",
           avatar: "",
+          subServices: [
+            {
+              name: "Tap repair",
+              rating: "4.79 (170.7K reviews)",
+              price: "78",
+              time: "5 mins",
+              including: ["Stuck or leaking tap", "UC Warranty Support"],
+              excluding: ["Repair or reinstallion", "Warranty on spare parts"],
+            },
+          ],
         },
         {
           name: "package3",
           avatar: "",
+          subServices: [
+            {
+              name: "Tap repair",
+              rating: "4.79 (170.7K reviews)",
+              price: "78",
+              time: "5 mins",
+              including: ["Stuck or leaking tap", "UC Warranty Support"],
+              excluding: ["Repair or reinstallion", "Warranty on spare parts"],
+            },
+          ],
         },
       ],
       mediaAd:
