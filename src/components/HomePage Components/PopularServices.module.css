@@ -1,0 +1,15 @@
+.services-container {
+  border: 2px solid;
+  display: flex;
+  height: 250px;
+  width: 90%;
+  margin-top: 50px;
+  margin-left: 60px;
+}
+
+.service-item {
+  border: 2px solid orangered;
+  margin: 30px;
+  height: 190px;
+  width: 190px;
+}

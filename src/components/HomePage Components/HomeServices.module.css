@@ -1,0 +1,28 @@
+.home-services-container {
+  border: 3px solid black;
+  margin-top: 150px;
+  height: 300px;
+  width: 99%;
+}
+
+.center {
+  text-align: center;
+}
+
+.home-services {
+  color: black;
+  width: 53%;
+  display: flex;
+  padding: 10px;
+  border: 3px solid red;
+  margin-left: 240px;
+  margin-top: 60px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  border: 2px solid yellowgreen;
+  padding: 21px;
+  margin-right: 10px;
+}

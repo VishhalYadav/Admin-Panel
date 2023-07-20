@@ -1,0 +1,30 @@
+.category-container {
+  /* border: 2px solid black; */
+  display: flex;
+  position: absolute;
+  bottom: -62px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 20px;
+  width: 50%;
+  height: 18%;
+  z-index: 1;
+  box-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+  border-radius: 8px;
+}
+
+.category-container__category {
+  border: 2px solid red;
+  color: black;
+  margin-right: 25px;
+  /* margin: 8px;
+  padding: 3px;
+  min-width: 6rem;
+  height: 5rem;
+  border-radius: 5px; */
+}
+
+.center {
+  text-align: center;
+}

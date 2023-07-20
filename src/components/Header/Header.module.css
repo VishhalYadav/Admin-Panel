@@ -1,0 +1,27 @@
+.header {
+  position: absolute;
+  top: 2%;
+  width: 100%;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  text-decoration: none;
+  color: white;
+  margin-right: 500px;
+}
+
+.nav-link,
+.special-li {
+  font-weight: bold;
+  margin-right: 40px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+.special-li {
+  text-decoration: underline;
+}

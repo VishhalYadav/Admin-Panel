@@ -1,0 +1,22 @@
+.bestoffer-container {
+  margin: 40px;
+  border: 2px solid;
+}
+
+.center {
+  text-align: center;
+}
+
+.offer-box {
+  border: 4px solid blue;
+  text-decoration: none;
+  color: black;
+  width: 200px;
+  height: 150px;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.parentContainer {
+  display: flex;
+}
