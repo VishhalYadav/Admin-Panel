@@ -1,0 +1,33 @@
+.footer {
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0c0c0c;
+  color: white;
+  height: 13rem;
+}
+
+.servicesContainer {
+  display: inline-block;
+  margin-right: 10rem;
+  margin-top: 0.5rem;
+  margin-left: 23rem;
+}
+
+.pagesContainer {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.servicesContainer > ul > li,
+.pagesContainer > ul > li {
+  margin: 3px;
+  padding: 5px;
+}
+
+.servicesContainer > ul,
+.pagesContainer > ul {
+  list-style-type: none;
+  margin-left: 20px;
+}

@@ -1,8 +1,8 @@
 import React from "react";
 import UpperBody from "../components/Header/UpperBody";
-import HomeServices from "../components/HomePage Components/HomeServices";
-import PopularServices from "../components/HomePage Components/PopularServices";
-import BestOffers from "../components/HomePage Components/BestOffers";
+import HomeServices from "../components/HomePageComponents/HomeServices";
+import PopularServices from "../components/HomePageComponents/PopularServices";
+import BestOffers from "../components/HomePageComponents/BestOffers";
 import Footer from "../components/Footer/Footer";
 const HomePage = (props) => {
   return (

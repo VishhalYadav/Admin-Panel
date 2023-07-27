@@ -2,9 +2,15 @@
   position: relative;
   display: inline-block;
   width: 100%;
-}
-
-img {
   width: 100%;
   height: 550px;
+  background-color: black;
+}
+
+.img {
+  height: 15rem;
+  width: 25rem;
+  position: relative;
+  top: 25%;
+  left: 60%;
 }

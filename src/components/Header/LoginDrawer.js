@@ -1,57 +1,29 @@
-import React from "react";
-import {
-  Drawer,
-  DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  Button,
-  Input,
-  useDisclosure,
-  ChakraProvider,
-} from "@chakra-ui/react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Modal from "../UI/Modal";
 
+import styles from "./LoginDrawer.module.css";
 const LoginDrawer = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = React.useRef();
+  const [showDrawer, setShowDrawer] = useState(false);
+
+  const toggleDrawerHandler = () => {
+    setShowDrawer((prev) => !prev);
+  };
   return (
-    <ChakraProvider>
-      <Link
-        ref={btnRef}
-        colorScheme="teal"
-        onClick={onOpen}
-        style={{ textDecoration: "none", fontWeight: "bold" }}
-      >
+    <React.Fragment>
+      <Link className={styles.link} onClick={toggleDrawerHandler}>
         Login/Sign Up
       </Link>
-      <Drawer
-        isOpen={isOpen}
-        placement="right"
-        onClose={onClose}
-        finalFocusRef={btnRef}
-        size="xs"
-      >
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader>Please Login to continue</DrawerHeader>
-
-          <DrawerBody>
-            <Input placeholder="Phone number..." />
-          </DrawerBody>
-
-          <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-            <Button colorScheme="blue">Continue</Button>
-          </DrawerFooter>
-        </DrawerContent>
-      </Drawer>
-    </ChakraProvider>
+      {showDrawer && (
+        <Modal onClick={toggleDrawerHandler}>
+          <h3>Please Login to continue</h3>
+          <input className={styles.input} type="number" min={10} />
+          <div>
+            <button className={styles.btn}>Continue</button>
+          </div>
+        </Modal>
+      )}
+    </React.Fragment>
   );
 };
 

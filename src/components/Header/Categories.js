@@ -1,54 +1,61 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import CategoryDrawer from "../../pages/CategoryDrawer";
 
 import styles from "./Categories.module.css";
 const Categories = (props) => {
+  const [showDrawerState, setShowDrawerState] = useState({
+    showDrawer: false,
+    id: "",
+  });
+
+  const toggleDrawerOpenHandler = (id) => {
+    setShowDrawerState((prev) => ({
+      showDrawer: !prev.showDrawer,
+      id: id,
+    }));
+  };
   const DUMMY_CATEGORIES = [
     {
       id: "c1",
       key: "1",
-      title: "Salon for Women",
+      title: "Home Repair",
       rating: "4.84 (9.5 M bookings)",
     },
     {
       id: "c2",
       key: "2",
-      title: "Hair, Skin and Nails",
+      title: "Appliance Repair",
       rating: "4.84 (9.5 M bookings)",
     },
     {
       id: "c3",
       key: "3",
-      title: "Spa for Women",
-      rating: "4.84 (9.5 M bookings)",
-    },
-    {
-      id: "c4",
-      key: "4",
-      title: "Salon for Men",
-      rating: "4.84 (9.5 M bookings)",
-    },
-    {
-      id: "c5",
-      key: "5",
-      title: "Massage for Men",
+      title: "Personal Care",
       rating: "4.84 (9.5 M bookings)",
     },
   ];
+
   return (
-    <div className={styles["category-container"]}>
-      {DUMMY_CATEGORIES.map((category) => {
-        return (
-          <Link
-            to={`/${category.id}/categories`}
+    <React.Fragment>
+      <div className={styles["category-container"]}>
+        {DUMMY_CATEGORIES.map((category) => (
+          <button
             key={category.key}
             className={styles["category-container__category"]}
+            onClick={() => toggleDrawerOpenHandler(category.id)}
           >
-            <h6 className={styles.center}>{category.title}</h6>
-          </Link>
-        );
-      })}
-    </div>
+            {category.title}
+          </button>
+        ))}
+      </div>
+
+      {showDrawerState.showDrawer && (
+        <CategoryDrawer
+          onClick={toggleDrawerOpenHandler}
+          chosenCategoryId={showDrawerState.id}
+        />
+      )}
+    </React.Fragment>
   );
 };
 
