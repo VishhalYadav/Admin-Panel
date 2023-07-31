@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useParams } from "react-router-dom";
 import SwitchImg from "../../assets/category/swtich.jpg";
 import FanImg from "../../assets/category/fan.jpg";
 import BulbImg from "../../assets/category/bulb.jpg";
@@ -37,12 +38,19 @@ const ItemCard = () => {
       img: BulbImg,
     },
   ];
-
+  const cId = useParams().categoryId;
+  console.log("cid", cId);
+  // "/:categoryId/categories/:serviceId/details"
+  // http://localhost:3000/c1/categories/c1/categories/i1/details
   return (
     <React.Fragment>
       <h3 className={styles.center}>Frequently Booked</h3>
       {ITEMS.map((item) => (
-        <div className={styles.itemCard} key={item.id}>
+        <Link
+          className={styles.itemCard}
+          key={item.id}
+          to={`${item.id}/details`}
+        >
           <div className={styles.categoryInfo}>
             <h4 className={styles.name}>{item.name}</h4>
             <p>{item.rating}</p>
@@ -58,7 +66,7 @@ const ItemCard = () => {
             <img src={item.img} alt="Switch" className={styles.boxImg} />
           </div>
           <AddBtn item={item} />
-        </div>
+        </Link>
       ))}
     </React.Fragment>
   );

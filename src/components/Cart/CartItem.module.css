@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #8a2b06;
-  padding: 1rem 0;
-  margin: 1rem 0;
-  border: 2px solid;
+  border-bottom: 3px solid #8a2b06;
+  margin: 1rem;
+  border: 3px solid black;
+  border-radius: 10px;
 }
 
 .cart-item h2 {
@@ -34,10 +34,14 @@
 
 .actions {
   display: flex;
+  width: 15rem;
+  position: relative;
+  right: 60%;
   flex-direction: column;
   border: 2px solid;
   background-color: wheat;
   border-radius: 10px;
+  margin: auto 0;
 }
 
 @media (min-width: 768px) {
@@ -50,10 +54,9 @@
   font: inherit;
   font-weight: bold;
   background-color: wheat;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #8a2b06;
   width: 3rem;
-  text-align: center;
   border-radius: 6px;
   cursor: pointer;
   margin-left: 1rem;
@@ -69,4 +72,12 @@
 
 .totalAmtBtn {
   border: 2px solid;
+  position: relative;
+  left: 9rem;
+}
+
+.foldingText {
+  margin-top: 0;
+  margin-bottom: 3rem;
+  text-align: center;
 }

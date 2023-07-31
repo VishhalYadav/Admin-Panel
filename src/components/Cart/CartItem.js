@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
-import classes from "./CartItem.module.css";
 import CartContext from "../../store/cart-context";
+
+import classes from "./CartItem.module.css";
 const CartItem = (props) => {
   const cartCtx = useContext(CartContext);
 
@@ -14,10 +15,10 @@ const CartItem = (props) => {
   return (
     <li className={classes["cart-item"]}>
       <div>
-        <h3>{props.item.name}</h3>
+        <p className={classes.foldingText}>{props.item.name}</p>
         <div className={classes.summary}>
           <button className={classes.totalAmtBtn}>
-            <span className={classes.price}>&#x20b9;{cartCtx.totalAmount}</span>
+            <span className={classes.price}>&#x20b9;{props.item.price}</span>
           </button>
         </div>
       </div>

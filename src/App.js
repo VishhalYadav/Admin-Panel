@@ -3,6 +3,8 @@ import HomePage from "./pages/HomePage";
 import Error from "./pages/ErrorPage";
 
 import CategoryPage from "./components/CategoryPage/CategoryPage";
+import CategoryDetails from "./components/CategoryPage/CategoryDetails";
+import CartPage from "./components/Cart/CartPage";
 function App() {
   return (
     <Router>
@@ -13,6 +15,11 @@ function App() {
           element={<CategoryPage />}
           exact
         />
+        <Route
+          path="/:categoryId/categories/:serviceId/details"
+          element={<CategoryDetails />}
+        />
+        <Route path="/cart" element={<CartPage />} />
         <Route path="/*" element={<Error />} />
       </Routes>
     </Router>

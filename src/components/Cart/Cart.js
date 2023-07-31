@@ -17,10 +17,15 @@ const Cart = () => {
     );
   }
   return (
-    <div>
-      {cartCtx.items.map((item) => (
-        <CartItem item={item} />
-      ))}
+    <div className={styles.cartItemContainer}>
+      <div>
+        {cartCtx.items.map((item) => (
+          <CartItem item={item} key={item.id} />
+        ))}
+      </div>
+      <button className={styles.totalAmtBtn}>
+        Total Amount is: {cartCtx.totalAmount}
+      </button>
     </div>
   );
 };

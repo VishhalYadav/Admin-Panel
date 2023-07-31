@@ -5,7 +5,20 @@
   border-radius: 10px;
 }
 
+.cartItemContainer {
+}
+
 .center {
   text-align: center;
   display: inline-block;
+}
+
+.totalAmtBtn {
+  margin-left: 4rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #8a2b06;
+  font-weight: bolder;
+  background-color: #dc7c53;
+  cursor: pointer;
 }
