@@ -1,14 +1,15 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 import LoginDrawer from "./LoginDrawer";
+import logo from "../../assets/logo.jpeg";
+
 import styles from "./Header.module.css";
 const Header = () => {
   return (
     <header className={styles.header}>
       <nav>
         <ul>
-          <Link className={styles.logo}>Logo</Link>
+          <Link className={styles.logo}>logo</Link>
           <Link className={styles["special-li"]}>
             Register As A Professional
           </Link>
