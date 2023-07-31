@@ -46,12 +46,8 @@ const ItemCard = () => {
     <React.Fragment>
       <h3 className={styles.center}>Frequently Booked</h3>
       {ITEMS.map((item) => (
-        <Link
-          className={styles.itemCard}
-          key={item.id}
-          to={`${item.id}/details`}
-        >
-          <div className={styles.categoryInfo}>
+        <div className={styles.itemCard} key={item.id}>
+          <Link to={`${item.id}/details`} className={styles.categoryInfo}>
             <h4 className={styles.name}>{item.name}</h4>
             <p>{item.rating}</p>
             <p>&#x20b9;{item.price}</p>
@@ -61,12 +57,12 @@ const ItemCard = () => {
                 <li>{des}</li>
               ))}
             </ul>
-          </div>
+          </Link>
           <div className={styles.imgDiv}>
             <img src={item.img} alt="Switch" className={styles.boxImg} />
           </div>
           <AddBtn item={item} />
-        </Link>
+        </div>
       ))}
     </React.Fragment>
   );
