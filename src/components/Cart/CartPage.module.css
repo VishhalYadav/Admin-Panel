@@ -44,18 +44,6 @@
   border-radius: 5px;
 }
 
-.FAQcontainer {
-  /* border: 2px solid; */
-  list-style-type: none;
-  font-weight: 400;
-  margin-left: 0;
-}
-
-.FAQcontainer > li {
-  margin: 1.25rem;
-  margin-left: 0;
-}
-
 .cartDiv {
   display: flex;
   border: 2px solid;

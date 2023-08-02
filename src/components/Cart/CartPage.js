@@ -1,27 +1,15 @@
 import React, { useState } from "react";
+import Faq from "./Faq";
 
 import styles from "./CartPage.module.css";
 const CartPage = () => {
-  const [isdropDown, setIsDropDown] = useState(false);
   const PLUS_IN_NUMBERS = [
     { title: "64 crores", text: "Saved by Plus members" },
     { title: "9.5 lakh+", text: "Happy Plus members" },
     { title: "4.84", text: "Average rating of Plus..." },
     { title: "6.3", text: "Average bookings per..." },
   ];
-  const text =
-    "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available";
-  const FAQS = [
-    { ques: "What are the benefits of Plus membership" },
-    { ques: "How does 100% money back guarantee work ?" },
-    { ques: "Who is UC Plus professinal ?" },
-    { ques: "Can I pay memebership through cash ?" },
-    { ques: "Can I cancel my memberhship after buying it ?" },
-  ];
 
-  const faqDropdownHandler = (e) => {
-    setIsDropDown((prev) => !prev);
-  };
   return (
     <React.Fragment>
       <h1 style={{ marginLeft: "1.5rem" }}>
@@ -78,22 +66,7 @@ const CartPage = () => {
             })}
           </div>
 
-          <ul className={styles.FAQcontainer}>
-            <h2>FAQS</h2>
-            {FAQS.map((faq) => {
-              return (
-                <li>
-                  <span
-                    style={{ display: "block" }}
-                    onClick={faqDropdownHandler}
-                  >
-                    {faq.ques}
-                  </span>
-                  <span>{isdropDown && text}</span>
-                </li>
-              );
-            })}
-          </ul>
+          <Faq />
         </div>
 
         <div className={styles.sideContainer}>
